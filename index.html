@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano de Estudo • Engenharia de Software</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f172a">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>📘 Plano de Estudo</h1>
+  <p>Engenharia de Software • Estácio</p>
+</header>
+
+<nav class="tabs">
+  <button class="active" onclick="openTab('dashboard', this)">Home</button>
+  <button onclick="openTab('semanal', this)">Semanal</button>
+  <button onclick="openTab('mensal', this)">Mensal</button>
+  <button onclick="openTab('notas', this)">Notas</button>
+</nav>
+
+<section id="dashboard" class="active">
+  <div class="card">
+    <h3>📊 Progresso Geral</h3>
+    <div class="progress"><span id="progGeral"></span></div>
+    <p id="txtGeral">0% concluído</p>
+  </div>
+</section>
+
+<section id="semanal">
+  <h2>📅 Plano Semanal</h2>
+
+  <div class="card">
+    <h3>Seg–Sex (19h–23h)</h3>
+    <label><input type="checkbox"> Algoritmos e Lógica</label>
+    <label><input type="checkbox"> Programação Web (HTML/CSS/JS)</label>
+    <label><input type="checkbox"> POO</label>
+    <label><input type="checkbox"> Banco de Dados</label>
+    <label><input type="checkbox"> Engenharia de Software</label>
+    <label><input type="checkbox"> Testes de Software</label>
+    <textarea placeholder="Anotações da semana"></textarea>
+  </div>
+
+  <div class="card">
+    <h3>Sábado (13h–16h)</h3>
+    <label><input type="checkbox"> Estrutura de Dados</label>
+    <label><input type="checkbox"> Sistemas Operacionais</label>
+    <label><input type="checkbox"> Projeto Integrador</label>
+    <textarea placeholder="Anotações do sábado"></textarea>
+  </div>
+</section>
+
+<section id="mensal">
+  <h2>🗓️ Plano Mensal</h2>
+  <div class="card">
+    <label><input type="checkbox"> Concluir Web</label>
+    <label><input type="checkbox"> JavaScript Intermediário</label>
+    <label><input type="checkbox"> Banco de Dados</label>
+    <label><input type="checkbox"> Projeto Integrador</label>
+    <textarea placeholder="Metas do mês"></textarea>
+  </div>
+</section>
+
+<section id="notas">
+  <h2>📝 Anotações Gerais</h2>
+  <div class="card">
+    <textarea placeholder="Anote tudo aqui..."></textarea>
+  </div>
+</section>
+
+<footer class="actions">
+  <button class="reset" onclick="resetar()">Resetar</button>
+  <button class="export" onclick="exportar()">Exportar</button>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>

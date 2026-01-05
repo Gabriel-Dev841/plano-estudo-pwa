@@ -1,0 +1,106 @@
+:root {
+  --bg: #0f172a;
+  --card: #020617;
+  --primary: #3b82f6;
+  --success: #22c55e;
+  --text: #e5e7eb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: var(--text);
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+}
+
+.tabs button {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  background: #1e293b;
+  color: white;
+}
+
+.tabs button.active {
+  background: var(--primary);
+}
+
+section {
+  display: none;
+  padding: 15px;
+}
+
+section.active {
+  display: block;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin: 6px 0;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #020617;
+  color: white;
+}
+
+.progress {
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.progress span {
+  height: 100%;
+  display: block;
+  background: linear-gradient(90deg, var(--success), var(--primary));
+  width: 0%;
+}
+
+.actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background: #020617;
+  padding: 10px;
+}
+
+.reset { background: #ef4444; }
+.export { background: #3b82f6; }
+
+button {
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 14px;
+}
